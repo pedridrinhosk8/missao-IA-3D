@@ -5,8 +5,10 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+conts botaoJogarNovamente = document.queryselector(".iniciar-btn");
 
 const perguntas = [
+    
     {
         enunciado: "o que você acha das pessoas que fazem racismo?",
         alternativas: [
@@ -73,6 +75,13 @@ let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
+function iniciaJogo() {
+    atual =0;
+    historiaFinal = "";
+    telainicial.style.display = 'none';
+    caixaperguntas.classlist.remove(".mostrar");
+    caixaAlternativas.classlist.remove(".mostrar");
+    caixaResultados.classlist.remove(".mostrar");
 function mostraPergunta() {
     if(atual >= perguntas.length){
         mostraResultado();
